@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="img">
+            <img src="images/def.png" alt="" id ="profile">
+            <label for="profileData" class="upload-img"> upload img</label>
+            <input type="file" accept="image/jpeg, image/png, image/jpg" id="profileData">
+        </div>
+        <div class="btn">
+            <button onclick="upload()">upload image</button>
+        </div>
+        <div class="info">
+            <input type="text" placeholder="Enter Your userName" id="user">
+            <button id="join-room">Enter</button>
+        </div>
+
+    </div>
+<!-- //---------------------------------------------------------------------------------------- -->
+
+    <div class="chatroom-container">
+
+        <div class="chatroom-header">Chatroom</div>
+        <div class="messages" id="message-container">
+           
+            <!-- function addData(data,check){
+                let msgDiv = document.createElement("div") ;
+                msgDiv.innerText = `${data.userName}:${data.message}` 
+                if(check){
+                    msgDiv.setAttribute('class', 'message sent');
+                } else{
+                    msgDiv.setAttribute('class', 'message recieved');
+                }
+                document.getElementById('message-container').appendChild(msgDiv);
+                document.getElementById('user').value="";
+             } -->
+
+        </div>     
+        <div class="bottom">
+            <input type="text" placeholder="enter message" id="message-input"/>
+            <button id="send-btn"><img src="images/sent2.png" alt=""></button>
+        </div>
+
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
